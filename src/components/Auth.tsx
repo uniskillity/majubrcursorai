@@ -60,10 +60,10 @@ export const Auth = () => {
             description: "Please check your email to confirm your account before signing in.",
           });
         } else {
-          toast({
-            title: "Account created!",
-            description: "Welcome to your personal book library.",
-          });
+        toast({
+          title: "Account created!",
+          description: "Welcome to your personal book library.",
+        });
         }
       }
     } catch (error: any) {

@@ -100,61 +100,61 @@ export const BookCard = ({
           />
         </div>
         <CardHeader className="space-y-2 p-4">
-          <div className="flex items-start justify-between gap-2">
-            <div className="flex-1 min-w-0">
+        <div className="flex items-start justify-between gap-2">
+          <div className="flex-1 min-w-0">
               <CardTitle className="font-sans text-lg leading-tight line-clamp-2 group-hover:text-primary transition-colors">
-                {title}
-              </CardTitle>
+              {title}
+            </CardTitle>
               <CardDescription className="font-sans text-xs mt-1 line-clamp-1">
-                {author}
-              </CardDescription>
-            </div>
+              {author}
+            </CardDescription>
+          </div>
             <button
-              onClick={handleSave}
+            onClick={handleSave}
               className="shrink-0 p-1.5 hover:bg-muted rounded-md transition-colors"
-            >
-              <Heart
+          >
+            <Heart
                 className={`h-4 w-4 transition-colors ${
                   isSaved ? "fill-primary text-primary" : "text-muted-foreground"
-                }`}
-              />
+              }`}
+            />
             </button>
-          </div>
-          
+        </div>
+        
           <div className="flex items-center gap-1.5 flex-wrap">
-            {department && (
+          {department && (
               <Badge variant="outline" className="text-xs px-2 py-0.5 bg-primary/5 text-primary border-primary/20">
-                {department}
-              </Badge>
-            )}
-            {semester && (
+              {department}
+            </Badge>
+          )}
+          {semester && (
               <Badge variant="secondary" className="text-xs px-2 py-0.5 bg-secondary/10 text-secondary">
                 Sem {semester}
-              </Badge>
-            )}
-            {courseCode && (
+            </Badge>
+          )}
+          {courseCode && (
               <Badge variant="outline" className="text-xs px-2 py-0.5">
-                {courseCode}
-              </Badge>
-            )}
-          </div>
-        </CardHeader>
+              {courseCode}
+            </Badge>
+          )}
+        </div>
+      </CardHeader>
 
         <CardContent className="space-y-3 p-4 pt-0">
-          {description && (
+        {description && (
             <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
-              {description}
-            </p>
-          )}
+            {description}
+          </p>
+        )}
 
-          <div className="flex items-center justify-between pt-2 border-t">
-            <div className="flex items-center gap-1">
+        <div className="flex items-center justify-between pt-2 border-t">
+          <div className="flex items-center gap-1">
               <Star className="h-3.5 w-3.5 fill-primary text-primary" />
               <span className="text-xs font-medium">{rating.toFixed(1)}</span>
-            </div>
+          </div>
           </div>
         </CardContent>
-      </div>
+        </div>
     </Card>
   );
 };

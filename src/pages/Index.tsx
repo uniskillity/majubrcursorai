@@ -327,21 +327,21 @@ const Index = () => {
             {books.map((book) => (
               <div key={book.id}>
                 <Link to={`/book/${book.googleBookId || book.id}`}>
-                  <BookCard
-                    id={book.id}
-                    title={book.title}
-                    author={book.author}
-                    description={book.description}
-                    genre={book.genre}
-                    rating={book.rating || 0}
-                    publishedYear={book.published_year || undefined}
-                    imageUrl={book.cover_url}
-                    department={book.department || undefined}
-                    semester={book.semester || undefined}
-                    courseCode={book.course_code || undefined}
-                    onSave={handleSaveBook}
-                  />
-                </Link>
+                <BookCard
+                  id={book.id}
+                  title={book.title}
+                  author={book.author}
+                  description={book.description}
+                  genre={book.genre}
+                  rating={book.rating || 0}
+                  publishedYear={book.published_year || undefined}
+                  imageUrl={book.cover_url}
+                  department={book.department || undefined}
+                  semester={book.semester || undefined}
+                  courseCode={book.course_code || undefined}
+                  onSave={handleSaveBook}
+                />
+              </Link>
               </div>
             ))}
           </div>
